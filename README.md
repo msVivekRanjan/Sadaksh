@@ -15,6 +15,12 @@ Detects and tracks **person, bicycle, car, motorcycle, bus, and truck** in real 
 SADAKSH/
 ├── requirements.txt
 ├── README.md
+├── asset/
+│  ├── demo1.mp4
+│  └── demo2.mp4
+├── output/
+│  ├── logs/
+│  └── video/
 └── src/
     ├── __init__.py
     ├── detector.py       # YOLOv8 detection-only wrapper
