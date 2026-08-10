@@ -4,7 +4,7 @@
 
 Detects and tracks **person, bicycle, car, motorcycle, bus, and truck** in real time from a webcam or video file.
 
-![SADAKSH Demo](asset/images/demo.png)
+![SADAKSH Demo](asset/images/demo1.png)
 
 
 ---
