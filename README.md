@@ -109,6 +109,15 @@ source .venv/bin/activate
 python3 src/main.py --save-video --output result.mp4
 ```
 
+### Use Sparsh CCTV Camera & Save Video
+
+```bash
+source .venv/bin/activate
+python src/main.py \
+--source "rtsp://admin:admin123@192.168.128.10:554/avstream/channel=1/stream=1.sdp?tcp" --save-video --output sparshcamera.mp4
+```
+
+
 ### GPU inference (CUDA device 0)
 
 ```bash

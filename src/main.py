@@ -82,7 +82,8 @@ def run(args: argparse.Namespace) -> None:
 
     # ── open video source ─────────────────────────────────────────────────────
     source = int(args.source) if args.source.isdigit() else args.source
-    cap = cv2.VideoCapture(source)
+    cap = cv2.VideoCapture(source, cv2.CAP_FFMPEG)
+    cap.set(cv2.CAP_PROP_BUFFERSIZE, 1)
     if not cap.isOpened():
         print(f"[ERROR] Cannot open source: {args.source}")
         sys.exit(1)
@@ -102,6 +103,9 @@ def run(args: argparse.Namespace) -> None:
 
     while True:
         ret, frame = cap.read()
+        # Skip old frames
+        for _ in range(2):
+            cap.grab()
         if not ret:
             break
 
