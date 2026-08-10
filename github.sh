@@ -1,4 +1,9 @@
 #!/bin/bash
 git add .
-git commit -m"Efficiency Improved"
-git push
+
+if git diff --cached --quiet; then
+  echo "No changes to commit"
+else
+  git commit -m "Efficiency Improved"
+  git push
+fi
