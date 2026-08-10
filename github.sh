@@ -6,4 +6,5 @@ if git diff --cached --quiet; then
 else
   git commit -m "Efficiency Improved"
   git push
+  echo "✅ Uploaded Successfully."
 fi
